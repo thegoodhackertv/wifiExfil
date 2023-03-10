@@ -8,6 +8,11 @@ Exfiltrate all Windows saved Wi-Fi passwords
  
 2. Install pyinstaller `C:\> pip install pyinstaller`
 
+3. Create a webhook url
+- https://requestinspector.com
+- https://beeceptor.com
+- https://webhook.site
+
 
 ## Instructions
 
