@@ -1,6 +1,6 @@
 # extractWifis
 
-Exfiltrate all Windows saved Wi-Fi passwords
+Exfiltrate all saved Wi-Fi passwords from Windows
 
 ## Requirements
 
