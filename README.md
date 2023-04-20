@@ -18,7 +18,7 @@ Run builder
 ```bash
 python3 build.py <webhook_url>
 ```
-Executable will be placed the `dist` folder
+Executable will be placed inside the `dist` folder
 
 ## Disclaimer
 Usage of these scripts for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.
