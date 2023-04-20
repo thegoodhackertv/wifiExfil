@@ -5,8 +5,8 @@ import subprocess
 
 def compile():
     cmd = ['cmd', '/c' ,'pyinstaller', 'script.py', '--onefile', '--noconsole', '--icon', 'icon.ico', '--name', 'extractWifis', '--log-level', 'ERROR']
-    print("Building..\n")
     subprocess.run(cmd,stdout=subprocess.DEVNULL)
+    print("[+] Done!")
 
 def build():
     if len(sys.argv) != 2:
