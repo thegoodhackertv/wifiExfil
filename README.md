@@ -1,11 +1,12 @@
+# wifiExfil
 
-Exfiltrate all saved Wi-Fi passwords from Windows
+Exfiltrate all saved Wi-Fi passwords from a Windows PC.
 
 ## Requirements
 
-1. On your Windows machine install Python https://www.python.org/downloads/
+1. On your Windows machine install Python from https://www.python.org/downloads/
 
-2. Install pyinstaller `pip install pyinstaller`
+2. Install pyinstaller, run `pip install pyinstaller` from cmd
 
 3. Create a webhook from one of the following sites:
 - https://requestinspector.com
